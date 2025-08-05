@@ -2,10 +2,10 @@
   <% @movies.each do |movie| %>
     <section class="w-lg flex flex-row items-center justify-between mb-4 p-4 border-b-1 border-b-gray-300">
       <div>
-        <h2 class="font-semibold text-2xl">
-          <%= movie.title %>
+        <h2 class="font-semibold text-2xl text-blue-500 cursor-pointer hover:text-blue-400 hover:underline">
+          <%= link_to movie.title, movie  %>
         </h2>
-        <h3 class="text-gray-500 decorat">
+        <h3 class="text-gray-500">
           <em><%= total_gross(movie) %></em>
         </h3>
         <p class="mt-4">
